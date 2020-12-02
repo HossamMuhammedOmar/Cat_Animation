@@ -1,6 +1,7 @@
-# cat_animation
+# Cat Animation
 
-A new Flutter project.
+![tom (2)](https://user-images.githubusercontent.com/49618856/100832086-d38a4300-346f-11eb-9470-80e87b299a05.png)
+
 
 ## Getting Started
 
