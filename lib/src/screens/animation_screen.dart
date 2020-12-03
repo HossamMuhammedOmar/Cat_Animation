@@ -1,3 +1,4 @@
+import 'package:cat_animation/src/box.dart';
 import 'package:flutter/material.dart';
 
 import '../cat.dart';
@@ -24,7 +25,7 @@ class AnimationScreenState extends State<AnimationScreen>
     );
 
     // init tomAnimation
-    tomAnimation = Tween(begin: 70.0, end: 170.0).animate(
+    tomAnimation = Tween(begin: 110.0, end: 260.0).animate(
       CurvedAnimation(
         curve: Curves.easeIn,
         parent: tomContoller,
@@ -55,6 +56,8 @@ class AnimationScreenState extends State<AnimationScreen>
       builder: (context, child) {
         return Positioned(
           bottom: tomAnimation.value,
+          left: 0,
+          right: 0,
           child: child,
         );
       },
@@ -64,14 +67,11 @@ class AnimationScreenState extends State<AnimationScreen>
 
   // create helper method for box
   Widget buildBox() {
-    return Container(
-      width: 200.0,
-      height: 200.0,
-      color: Color(0xff2980b9),
-    );
+    return Box();
   }
 
   void onTap() {
+    print(num);
     if (tomContoller.status == AnimationStatus.completed) {
       tomContoller.reverse();
     } else if (tomContoller.status == AnimationStatus.dismissed) {
